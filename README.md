@@ -38,8 +38,8 @@ A full-stack **User Management System** built with **React.js**, **Spring Boot**
 ---
 
 ## 📸 Screenshots
-![Home Page](https://github.com/Vishal-1007/User-Management-System/blob/main/home.png)
-![User List](https://github.com/Vishal-1007/User-Management-System/blob/main/list.png)
+![Home Page](https://github.com/Vishal-1007/User-Management-System/blob/main/git2.png)
+![User List](https://github.com/Vishal-1007/User-Management-System/blob/main/git5.png)
 
 ---
 
