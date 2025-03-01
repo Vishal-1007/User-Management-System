@@ -1,106 +1,108 @@
-User Management System 🚀
-A full-stack User Management System built with React.js, Spring Boot, JWT Authentication, and PostgreSQL. This project provides a secure and efficient way to manage user accounts, including user authentication, adding users, and listing users with search functionality.
+# 🚀 User Management System
+
+A full-stack **User Management System** built with **React.js**, **Spring Boot**, **JWT Authentication**, and **PostgreSQL**. This project offers a secure and efficient way to manage user accounts, including authentication, adding users, and listing users with search functionality.
+
 ![Project Screenshot](https://github.com/Vishal-1007/User-Management-System/blob/main/git1.png)
 
-# Getting Started with Create React App
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🎯 Features
+### **Frontend (React.js)**
+✅ **Home Page** – Navigation to Add User & List Users  
+✅ **Add User** – Form validation & user creation  
+✅ **List Users** – Dynamic search functionality  
+✅ **Secure API Calls** – Uses JWT authentication  
 
-## Available Scripts
+### **Backend (Spring Boot)**
+✅ **User Authentication** – JWT-based security  
+✅ **RESTful APIs** – For user CRUD operations  
+✅ **Database Storage** – PostgreSQL for secure data handling  
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🛠 Tech Stack
+### **Frontend**
+- ⚛️ **React.js** – UI Development
+- 🎨 **Bootstrap** – Styling & UI components
+- 🔗 **Axios** – API Requests
+- 🚏 **React Router** – Navigation
+- 🔔 **React Toastify** – Notifications
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **Backend**
+- ☕ **Spring Boot** – Backend API
+- 🔐 **Spring Security & JWT** – Authentication & Security
+- 🗄 **PostgreSQL** – Database
+- 📡 **Spring Data JPA** – Database operations
+- 🛠 **Postman** – API Testing
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-Tech Stack
-Frontend:
-React.js – UI development
-Bootstrap – Styling and UI components
-Axios – API requests
-React Router – Navigation
-React Toastify – Notifications
+## 📸 Screenshots
+![Home Page](https://github.com/Vishal-1007/User-Management-System/blob/main/home.png)
+![User List](https://github.com/Vishal-1007/User-Management-System/blob/main/list.png)
 
-Backend:
-Spring Boot – Backend API
-Spring Security & JWT – Authentication and security
-PostgreSQL – Database
-Spring Data JPA – Database operations
-Postman – API testing
-Features
-Frontend (React.js)
-✅ Home Page: Navigation to Add User and List Users
-✅ Add User: Form validation and user creation
-✅ List Users: Search users dynamically
-✅ Secure API calls with JWT authentication
+---
 
-Backend (Spring Boot)
-✅ User Authentication with JWT
-✅ RESTful APIs for CRUD operations
-✅ Secure user data storage using PostgreSQL
-
-2. Backend Setup (Spring Boot)
-a) Configure PostgreSQL
-Ensure PostgreSQL is installed and running.
-Create a database:
-sql
-Copy
-Edit
+## 🚀 Getting Started
+### **Backend Setup (Spring Boot)**
+#### 📌 **1. Configure PostgreSQL**
+Ensure PostgreSQL is installed and running. Then, create a database:
+```sql
 CREATE DATABASE user_management;
-b) Update application.properties
-Modify database details in src/main/resources/application.properties:
+```
 
-properties
-Copy
-Edit
+#### 📌 **2. Update `application.properties`**
+Modify database details in `src/main/resources/application.properties`:
+```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/user_management
 spring.datasource.username=your_db_user
 spring.datasource.password=your_db_password
 spring.jpa.hibernate.ddl-auto=update
 spring.security.jwt.secret=your_jwt_secret
-c) Run the Spring Boot Application
-bash
-Copy
-Edit
+```
+
+#### 📌 **3. Run the Spring Boot Application**
+```sh
 mvn spring-boot:run
-The server will start at http://localhost:8000
+```
+The server will start at **[http://localhost:8000](http://localhost:8000)**.
 
-3. Frontend Setup (React.js)
-a) Navigate to Frontend Directory
-bash
-Copy
-Edit
+---
+
+### **Frontend Setup (React.js)**
+#### 📌 **1. Navigate to Frontend Directory**
+```sh
 cd frontend
-b) Install Dependencies
-bash
-Copy
-Edit
+```
+#### 📌 **2. Install Dependencies**
+```sh
 npm install
-c) Run React App
-bash
-Copy
-Edit
+```
+#### 📌 **3. Run React App**
+```sh
 npm start
-The app will run at http://localhost:3000
+```
+The app will run at **[http://localhost:3001](http://localhost:3001)** (since port 3000 is in use).
 
-API Endpoints (Test in Postman)
-Authentication API
-Method	Endpoint	Description
-POST	/api/auth/login	Authenticate user and get JWT token
-User Management API
-Method	Endpoint	Description
-POST	/users/add	Add a new user (JWT required)
-POST	/users/search	Search users based on input (JWT required)
-Project Structure
-Backend (Spring Boot)
-css
-Copy
-Edit
+---
+
+## 🔥 API Endpoints (Test in Postman)
+### **Authentication API**
+| Method | Endpoint | Description |
+|--------|---------|-------------|
+| POST | `/api/auth/login` | Authenticate user & get JWT token |
+
+### **User Management API**
+| Method | Endpoint | Description |
+|--------|---------|-------------|
+| POST | `/users/add` | Add a new user (JWT required) |
+| POST | `/users/search` | Search users dynamically (JWT required) |
+
+---
+
+## 📂 Project Structure
+### **Backend (Spring Boot)**
+```
 src/
 │── main/
 │   ├── java/com/project/
@@ -111,10 +113,10 @@ src/
 │   │   ├── services/ (Business Logic)
 │   ├── resources/
 │       ├── application.properties (DB Config)
-Frontend (React.js)
-pgsql
-Copy
-Edit
+```
+
+### **Frontend (React.js)**
+```
 src/
 │── components/
 │   ├── Home.js
@@ -124,17 +126,29 @@ src/
 │── css/ (Stylesheets)
 │── App.js (Routes)
 │── index.js (Entry Point)
-Security & Authentication
-JWT Token-based authentication
-Secure endpoints using Authorization header
-Password encryption using BCrypt
-Future Improvements
-Add role-based authentication
-Implement pagination in user listing
-Improve UI styling
+```
 
-Contributor
-👤 Vishal Gupta
-https://vishal-1007.github.io/Portfolio/
-This README.md provides a complete overview of your project. Let me know if you want any modifications! 🚀
+---
+
+## 🔐 Security & Authentication
+- 🔑 **JWT Token-based authentication**
+- 🔒 **Secure API endpoints using Authorization header**
+- 🔐 **Password encryption using BCrypt**
+
+---
+
+## 📌 Future Improvements
+🚀 **Role-based authentication**  
+📊 **Pagination for user listing**  
+🎨 **Enhanced UI design**  
+
+---
+
+## 👤 Contributor
+**Vishal Gupta**  
+🔗 [Portfolio](https://vishal-1007.github.io/Portfolio/)
+
+---
+
+🚀 *Feel free to contribute, open issues, or suggest improvements!*
 
