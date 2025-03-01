@@ -1,0 +1,171 @@
+/* 🌟 Modern Home Container */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    background: linear-gradient(120deg, #6a11cb, #2575fc);
+    padding: 50px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    margin: 50px auto;
+    max-width: 900px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 🎆 Heading Styling - Placed Above Logo */
+.home-container h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 800;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px; /* Reduced margin to align with the logo */
+    position: relative;
+    z-index: 2;
+    animation: hoverUpDown 2s infinite alternate ease-in-out;
+}
+
+/* 🌈 Underline Effect */
+.home-container h1::after {
+    content: '';
+    display: block;
+    width: 140px;
+    height: 5px;
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    border-radius: 3px;
+    margin: 12px auto 0;
+}
+
+/* 🖼️ Logo Styling - Now Below the Heading */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px; /* Adjusted spacing to align better */
+    position: relative;
+}
+
+/* ✨ Enhanced Logo */
+.home-logo {
+    width: 180px;  /* Increased size */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    animation: floatingLogo 3s infinite ease-in-out;
+}
+
+/* 🔥 Hover Effect - 3D Rotation & Glow */
+.home-logo:hover {
+    transform: scale(1.15) rotateY(10deg);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.5);
+}
+
+/* 🌊 Floating Animation */
+@keyframes floatingLogo {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* 🎨 Button Container */
+.button-container {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.4s;
+}
+
+/* 🏆 Button Styling */
+.btn {
+    padding: 16px 36px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔥 Button Hover Effect */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* 💙 Primary Button */
+.btn-primary {
+    background: linear-gradient(135deg, #ff4081, #ff79a2);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(255, 64, 129, 0.4);
+}
+
+/* 💚 Success Button */
+.btn-success {
+    background: linear-gradient(135deg, #4caf50, #8bc34a);
+    color: white;
+}
+
+.btn-success:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(76, 175, 80, 0.4);
+}
+
+/* 🌀 Floating Animation for Heading */
+@keyframes hoverUpDown {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(8px); }
+}
+
+/* 🎭 Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🎯 Responsive Design */
+@media (max-width: 600px) {
+    .home-container {
+        max-width: 95%;
+        padding: 30px;
+    }
+
+    .home-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px 0;
+    }
+}

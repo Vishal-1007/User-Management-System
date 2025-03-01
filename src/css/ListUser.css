@@ -1,0 +1,220 @@
+/* 🌟 Classy Background */
+body {
+    background: linear-gradient(135deg, #1f1c2c 0%, #5cb85c 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 🎭 Glassy List Container */
+.list-user-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 🎆 Stylish Heading */
+.list-user-container h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding-bottom: 12px;
+}
+
+/* ✨ Underline Effect */
+.list-user-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(to right, #28a745, #5cb85c);
+    border-radius: 3px;
+}
+
+/* 🔍 Search Section */
+.search-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🔥 Stylish Search Bar */
+.search-container .form-control {
+    flex: 1;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    outline: none;
+    font-weight: 500;
+}
+
+/* 🎯 Focus Effect */
+.search-container .form-control:focus {
+    border: 1px solid #28a745;
+    box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.3);
+}
+
+/* 🔘 Search Button */
+.search-container .btn-primary {
+    background: linear-gradient(to right, #28a745, #5cb85c);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    cursor: pointer;
+}
+
+.search-container .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+}
+
+/* 📊 Modern Table */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 🟢 Table Header */
+.table thead {
+    background: linear-gradient(to right, #28a745, #5cb85c);
+    color: white;
+}
+
+.table thead th {
+    padding: 16px;
+    font-weight: 600;
+    text-align: left;
+    border: none;
+}
+
+/* 📄 Table Rows */
+.table tbody tr {
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 🖱️ Hover Effect */
+.table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.01);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+    position: relative;
+}
+
+/* 📌 Table Data */
+.table tbody td {
+    padding: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    vertical-align: middle;
+    color: white;
+}
+
+/* 🎨 Alternating Row Colors */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 🔄 Spinner */
+.spinner-border {
+    color: #28a745;
+    margin: 30px auto;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+}
+
+/* 🎭 Secondary Button */
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 117, 125, 0.4);
+}
+
+/* ⚠️ Alert Boxes */
+.alert {
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    border: none;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* 🎬 Table Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.table tbody tr {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+    }
+    
+    .search-container .btn-primary {
+        width: 100%;
+    }
+    
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
